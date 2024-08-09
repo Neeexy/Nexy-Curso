@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+*,body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-menus:#1f1d1d;
+}
+body {
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-image: url(vkg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: var(--cor-menus);
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ffff;
+    box-sizing: border-box;
+    
+}
+header h1::before{
+    content: "☯ ";
+}
+header h1:hover
+{
+color: #f56302;
+transition: color 0.3s ease-in-out;
+}
+@media (max-width: 768px) { 
+    #menu {
+        max-width: 80%; /* Largura menor em telas menores */
+    }
+}
+/* Largura menor em telas menores */
+
+
+main h1{
+    text-align: center;
+    margin-top: 13px;
+
+}
+section#artigos {
+    align-items: center;
+    width: auto; /* Largura automática para se ajustar ao conteúdo */
+    min-width: 56%;
+    max-width: 56%; /* Limita a largura máxima em telas menores */
+    margin: auto;
+    margin-left: 307px;
+    text-align: justify;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que os artigos quebrem a linha */
+    gap: 55px;
+        
+
+}
+section.bv h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+section#artigos h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+
+}
+section#artigos h2{
+    font-size: 20px;
+    text-indent: 10px;
+}
+section#artigos p{
+    padding: 8px;
+    text-indent: 10px;
+
+}
+
+#pagcursos{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+}
+footer{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+footer a{
+    color: rgb(116, 111, 111);
+    
+}
+footer a:hover{
+    color: #f56302;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Barra de rolagem*/
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+width: 10px; /* Largura da barra */
+}
+
+/* Estilizando a área da barra */
+::-webkit-scrollbar-track {
+background: var(--cor-menus); /* Cor de fundo */
+}
+
+/* Estilizando a alça da barra */
+::-webkit-scrollbar-thumb {
+background: white; /* Cor da alça */
+border-radius: 5px; /* Borda arredondada */
+}
+
+/* Estilizando a alça da barra ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Cor da alça ao passar o mouse */
+transition:all 0.3s ease-in-out;
+}
+

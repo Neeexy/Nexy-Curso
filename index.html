@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="components/file.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nexys Cursos</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/menu.css">
+    <link rel="stylesheet" href="Styles/border.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // Verifique se o usuário está autenticado
+        if (!localStorage.getItem('authenticated')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Nexys Cursos </h1>
+        </a> 
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="index.html"><li>Início</li></a>
+                    <a href="cursos.html"><li>Cursos</li></a>
+                    <a href="documentos.html"><li>Documentos</li></a>
+                    <a href="https://gabrielportf.netlify.app/" target="_blank"><li>Criador</li></a>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem Vindo!!</h1>
+        <section id="artigos">
+            <article class="cursos">
+                <a href="cursos.html">
+                    <div id="box">
+                        <h1>Acessar Cursos</h1>
+                        <h2>Para acessar os cursos:</h2>
+                        <p>Clique no menu ao lado esquerdo da página, selecione o ambiente 'Cursos' e você será redirecionado para a seleção de cursos, onde poderá escolher qual curso quer assistir e seus módulos.</p>
+                    </div>
+                </a>
+                    
+            </article>
+            <article class="docs">
+                <a href="documentos.html">
+                    <div id="box">
+                        <h1>Acessar Documentos</h1>
+                        <h2>Para acessar os documentos:</h2>
+                        <p>Clique no menu ao lado esquerdo da página, selecione o ambiente 'Documentos' e você será redirecionado para a seleção de documentos, onde poderá escolher a documentação de um curso, então você será redirecionado à uma página do Drive com os arquivos de todas as aulas do curso.</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer><div id="github"><a href="https://github.com/DevGabrielAndrade" target="_blank"><i class="fa fa-github" style="font-size:48px"></i></a></div></footer>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+                console.log('particles.js loaded - callback');
+            });
+    </script>
+</body>
+
+</html>

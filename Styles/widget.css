@@ -1,0 +1,164 @@
+
+.widget {
+    /* Estilos para o container do widget */
+    display: block; /* Torna o widget clicável */
+    width: 270px; /* Largura do widget */
+    border: 1px solid #1f1d1d; /* Borda do widget */
+    padding-top: 10px; /* Espaçamento interno */
+    padding-bottom: 10px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    border-radius: 20px;
+    background-color: #1f1d1d;
+    transition: all 0.5s ease-in-out;
+    margin: 10px; /* Espaçamento entre widgets */
+    box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.74);
+}
+
+.widget img {
+    /* Estilos para a imagem */
+    width: 100%; /* Faz a imagem ocupar toda a largura do widget */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.widget p {
+        color: #d4d2d2; /* Estilos para a legenda */
+    margin-top: 5px; /* Espaçamento superior da legenda */
+}
+.widget h2{
+    color: #d6d6d6;
+}
+
+.widget:hover {
+    transform: translate(-2px,-4px) scale(1.005);
+    background-color: #f54f02a8;
+    border: black 1px solid;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+}
+a:visited{
+    color: antiquewhite;
+}
+
+#pagcursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.module-link::before{
+    content: "\1F4C1";
+}
+/* Estilos para os modais */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 60%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 10px;
+    color: white;
+    animation: showModal 0.5s ease-in-out;
+}
+
+@keyframes showModal {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.module {
+    margin-bottom: 15px;
+    background-color: #444f53;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.712) ;
+}
+
+.module:hover{
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+}
+
+.module-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 3px;
+    margin-bottom: 6px;
+}
+
+.module-subtitle {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.module-link {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #f54f02a8;
+}
+
+.module-link i {
+    margin-left: 5px;
+}
+
+.module a:hover{
+    color: #f54f02;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}

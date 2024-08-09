@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="components/file.png" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/login.css">
+    <title>Login - Nexys Cursos</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+</head>
+<body>
+    <h1>Nexys Cursos</h1>
+    <div id="particles-js"></div>
+    <article id="login">    
+        <div class="login-container">
+            <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Entrar</button>
+                    <p id="error-message"></p>
+                </form>
+        </div>
+    </article>
+
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('error-message');
+    
+        // Adicione aqui os usuários e senhas permitidos
+        const validCredentials = {
+            'Olinto': 'romerogay',
+            // Adicione mais usuários e senhas conforme necessário
+        };
+    
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            // Verifique se as credenciais são válidas
+            if (validCredentials[username] && validCredentials[username] === password) {
+                // Se as credenciais estiverem corretas, redirecione para a página principal
+                localStorage.setItem('authenticated', 'true');
+                window.location.href = "index.html";
+
+            } else {
+                // Se as credenciais estiverem incorretas, exiba uma mensagem de erro
+                errorMessage.textContent = 'Usuário ou senha incorretos. Tente novamente.';
+                errorMessage.style.color = 'red';
+            }
+        });
+    </script>
+
+</body>
+</html>

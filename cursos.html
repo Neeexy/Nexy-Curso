@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="components/file.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/menu.css">
+    <link rel="stylesheet" href="Styles/widget.css">
+    <title>Nexys Cursos</title>
+    <style>
+        .modal-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 5px;
+            padding: 15px;
+            position: relative;
+        }
+        .modal-content .module {
+            background: #666666;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1>Nexys Cursos</h1>
+        </a>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="index.html" target="_parent"><li>Início</li></a>
+                    <a href="cursos.html" target="_self"><li>Cursos</li></a>
+                    <a href="documentos.html"><li>Documentos</li></a>
+                    <a href="https://gabrielportf.netlify.app/" target="_blank"><li>Criador</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Escolha um curso!!</h1> <br>
+        <section id="pagcursos">
+            <a href="#" onclick="openModal('modalPython')">
+                <div class="widget">
+                    <h2>Nexys Python</h2>
+                    <img src="components/banners/[Banner] PY .png" alt="Descrição da imagem">
+                    <p>Curso de Python</p>
+                </div>
+            </a>
+            <a href="#" onclick="openModal('modalJavaScript')">
+                <div class="widget">
+                    <h2>Nexys JavaScript</h2>
+                    <img src="components/banners/[Banner] JS.jpg" alt="Descrição da imagem">
+                    <p>Curso de JavaScript</p>
+                </div>
+            </a>
+            <a href="#" onclick="openModal('modalExcel')">
+                <div class="widget">
+                    <h2>Nexys Excel</h2>
+                    <img src="components/banners/[Banner] EXCEL.png" alt="Descrição da imagem">
+                    <p>Curso de Excel</p>
+                </div>
+            </a>
+            <a href="#" onclick="openModal('modalPowerBI')">
+                <div class="widget">
+                    <h2>Nexys PowerBI</h2>
+                    <img src="components/banners/[Banner] PBI.jpg" alt="Descrição da imagem">
+                    <p>Curso de PowerBI</p>
+                </div>
+            </a>
+            <a href="#" onclick="openModal('modalSQL')">
+                <div class="widget">
+                    <h2>Nexys SQL</h2>
+                    <img src="components/banners/[Banner] SQL.jpg" alt="Descrição da imagem">
+                    <p>Curso de SQL</p>
+                </div>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/DevGabrielAndrade"><i class="fa fa-github" style="font-size:48px"></i></a>
+    </footer>
+
+    <!-- Modal Python -->
+    <div id="modalPython" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPython')">&times;</span>
+            <div class="module">
+                <div class="module-title">Módulo 8</div>
+                <div class="module-subtitle">Listas em Python</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyu2pxzNewmEPCmIuVtY0Y7r" target="_blank">Ir para o módulo </a>
+            </div>
+            <div class="module">
+                <div class="module-title">Módulo 9</div>
+                <div class="module-subtitle">Estrutura de Repetição</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyuf_rh1uRPjCG3xIkUiLloh" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 10</div>
+                <div class="module-subtitle">While e Loop Infinto</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyt5YOh5HJ8b0qGUB2MyxDZg" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 11</div>
+                <div class="module-subtitle">Tuplas</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyvkkTmJ4aO1oGZXRQ5i8zFO" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 12</div>
+                <div class="module-subtitle">Dicionários em Python</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfysc8KlLgjQJJIFez8lsWJro" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 13</div>
+                <div class="module-subtitle">Iterables em Python</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfysr-ZNvZPfWVw5SyK4FlZQD" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 14</div>
+                <div class="module-subtitle">Funções em Python</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfys_PPODB0foVpidkROKGE5a" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 15</div>
+                <div class="module-subtitle">List Compreshension em Python</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyvVOfOD8weZFJ2oQuGT97hm" target="_blank">Ir para o módulo </a>
+            </div>  
+            <div class="module">
+                <div class="module-title">Módulo 17</div>
+                <div class="module-subtitle">Módulos, Bibliotecas e Introdução à Orientação a Objeto</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfys97ixzEg915iLDhBo7rRob" target="_blank">Ir para o módulo </a>
+            </div>  
+            <!-- Adicione mais módulos conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Modal JavaScript -->
+    <div id="modalJavaScript" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalJavaScript')">&times;</span>
+            <div class="module">
+                <div class="module-title">Módulo 1</div>
+                <div class="module-subtitle">Introdução ao JavaScript</div>
+                <a class="module-link" href="https://youtube.com/playlist?list=PLMGNVqE3hfyv_Np-VJ_onS8C7c-HzIp9l&si=l-Rw17y1UB3dNPZZ" target="_blank">Ir para o módulos</a>
+            </div>
+            <!-- Adicione mais módulos conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Modal Excel -->
+    <div id="modalExcel" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalExcel')">&times;</span>
+            <div class="module">
+                <div class="module-title">Módulo 1</div>
+                <div class="module-subtitle">Introdução ao Excel</div>
+                <a class="module-link" href="https://www.youtube.com/playlist?list=PLMGNVqE3hfyu5U1PFI4R9K0o7vRhI-tlW" target="_blank">Ir para o módulo</a>
+            </div>
+            <!-- Adicione mais módulos conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Modal PowerBI -->
+    <div id="modalPowerBI" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalPowerBI')">&times;</span>
+            <div class="module">
+                <div class="module-title">Módulo 1</div>
+                <div class="module-subtitle">Introdução ao PowerBI</div>
+                <a class="module-link" href="https://youtube.com/playlist?list=PLMGNVqE3hfyuIhtDe-jKGf5t-l0qGCN5L&si=AWuoKVd1KbEYNuTA" target="_blank">Ir para o módulo</a>
+            </div>
+            <!-- Adicione mais módulos conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Modal SQL -->
+    <div id="modalSQL" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modalSQL')">&times;</span>
+            <div class="module">
+                <div class="module-title">Módulo 1</div>
+                <div class="module-subtitle">Introdução ao SQL</div>
+                <a class="module-link" href="https://youtube.com/playlist?list=PLMGNVqE3hfyu-E9jnqh4xpX1iW8BzbVMT&si=A3zRp_GI4OKn2c1V" target="_blank">Ir para o módulo</a>
+            </div>
+            <!-- Adicione mais módulos conforme necessário -->
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.body.classList.add('modal-open');
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.body.classList.remove('modal-open');
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    document.body.classList.remove('modal-open');
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
